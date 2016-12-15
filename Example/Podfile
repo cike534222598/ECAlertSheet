@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ECAlertSheet_Example' do
+  pod 'ECAlertSheet', :path => '../'
+
+  target 'ECAlertSheet_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
