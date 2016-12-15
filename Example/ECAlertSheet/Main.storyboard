@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="whP-gf-Uak">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,9 +18,53 @@
                         <viewControllerLayoutGuide type="bottom" id="Mvr-aV-6Um"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4k-9v-zyX">
+                                <rect key="frame" x="154.5" y="170" width="66" height="30"/>
+                                <state key="normal" title="AlertView">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="alertClick:" destination="whP-gf-Uak" eventType="touchUpInside" id="meO-0F-8h7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3b-WR-Brs">
+                                <rect key="frame" x="145.5" y="230" width="84" height="30"/>
+                                <state key="normal" title="ActionSheet">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sheetClick:" destination="whP-gf-Uak" eventType="touchUpInside" id="6EW-NY-f06"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzV-Fl-T45">
+                                <rect key="frame" x="134" y="290" width="106" height="30"/>
+                                <state key="normal" title="QuickAlertView"/>
+                                <connections>
+                                    <action selector="quickAlertClick:" destination="whP-gf-Uak" eventType="touchUpInside" id="5L7-wr-kRU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MpJ-oq-758">
+                                <rect key="frame" x="126" y="350" width="123" height="30"/>
+                                <state key="normal" title="QuickActionSheet"/>
+                                <connections>
+                                    <action selector="quickSheetClick:" destination="whP-gf-Uak" eventType="touchUpInside" id="sde-nz-5Ro"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="e3b-WR-Brs" firstAttribute="top" secondItem="F4k-9v-zyX" secondAttribute="bottom" constant="30" id="4gH-WT-WCR"/>
+                            <constraint firstItem="dzV-Fl-T45" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="Bwl-PD-Bw6"/>
+                            <constraint firstItem="F4k-9v-zyX" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="150" id="GvV-5m-rCr"/>
+                            <constraint firstItem="e3b-WR-Brs" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="LLy-Fy-MyG"/>
+                            <constraint firstItem="F4k-9v-zyX" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="YMk-Cf-dnh"/>
+                            <constraint firstItem="MpJ-oq-758" firstAttribute="top" secondItem="dzV-Fl-T45" secondAttribute="bottom" constant="30" id="hpB-rN-g4b"/>
+                            <constraint firstItem="dzV-Fl-T45" firstAttribute="top" secondItem="e3b-WR-Brs" secondAttribute="bottom" constant="30" id="jNf-Ak-nmI"/>
+                            <constraint firstItem="MpJ-oq-758" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="tT6-3W-4Bd"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>

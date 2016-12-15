@@ -1,0 +1,16 @@
+PODS:
+  - ECAlertSheet (1.0.0)
+
+DEPENDENCIES:
+  - ECAlertSheet (from `../`)
+
+EXTERNAL SOURCES:
+  ECAlertSheet:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ECAlertSheet: 419e9679f86bf45b01760b378656b88e620b8d21
+
+PODFILE CHECKSUM: b12383086eab0dbe382e7466ab80388c42b3c545
+
+COCOAPODS: 1.1.1

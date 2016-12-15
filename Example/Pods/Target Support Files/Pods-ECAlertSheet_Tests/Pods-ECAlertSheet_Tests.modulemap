@@ -1,0 +1,6 @@
+framework module Pods_ECAlertSheet_Tests {
+  umbrella header "Pods-ECAlertSheet_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

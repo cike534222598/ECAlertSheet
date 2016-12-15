@@ -1,0 +1,6 @@
+framework module ECAlertSheet {
+  umbrella header "ECAlertSheet-umbrella.h"
+
+  export *
+  module * { export * }
+}
